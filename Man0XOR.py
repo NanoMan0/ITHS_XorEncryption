@@ -75,7 +75,8 @@ def main():
         dest="Key",
         help="provide XOR encryption key (hex, string or number)",
         required=True, 
-        type=xorkey_formater.key_check)
+        #type=xorkey_formater.key_check
+        )
     
     parser.add_argument(
         "--f", 
@@ -93,11 +94,20 @@ def main():
     args = parser.parse_args()
 
 
-        ## START PROCESS ##
-
-        ### read shellcode from file via shellcodeReader func ###
+    ## START PROCESS ##
 
     try:
+
+        ##storing original key to be displayed to user##
+        original_key = args.Key
+
+        ##validating and formating key for XOR ###
+
+        args.Key = xorkey_formater.key_check(args.Key)
+
+
+
+        ### read shellcode from file via shellcodeReader func ###
 
         shellcode = shellcode_reader.read_binary(args.InputFile)     
 
@@ -124,7 +134,9 @@ def main():
 
         print (f"-> Output format: {args.Format}\n")
 
-        print (f"-> XOR key: {args.Key}\n")
+        print (f"-> XOR key: {original_key}\n")
+
+        print (f"-> Key size (bytes): {len(args.Key)}\n")
 
         print(f"-> Shellcode has been encrypted and saved as: {args.OutputFile}\n")
 

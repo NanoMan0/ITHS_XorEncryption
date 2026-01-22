@@ -35,7 +35,7 @@ A tool that obfusctates *raw* shellcode as part of payload chain using XOR.
 
 - Output designed for easy copy pasta into ex. a loader. 
 
-- XORed output prints to console and saves to selcted file location.
+- XORed output prints to terminal and saves to selcted file location.
 
 ---
 

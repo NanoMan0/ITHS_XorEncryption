@@ -44,7 +44,7 @@ A tool that obfusctates *raw* shellcode as part of payload chain using XOR.
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/yourusername/Man0Crypt.git
+    git clone https://github.com/NanoMan0/ITHS_XorEncryption.git
     ```
 
 2. **Install dependencies**:

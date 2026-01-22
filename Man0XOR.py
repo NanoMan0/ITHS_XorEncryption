@@ -74,7 +74,7 @@ def main():
         "--key", 
         dest="Key",
         help="provide XOR encryption key (hex, string or number)",
-        required=True, 
+        required=True
         #type=xorkey_formater.key_check
         )
     

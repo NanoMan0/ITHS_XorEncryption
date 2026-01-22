@@ -84,5 +84,5 @@ To run the tool, specify the following arguments.
 ### Example Usage:
 
 ```bash
-python Man0Crypt.py --i raw-shellcode.xyz --o output-file.xyz --key 0xAA --f c
+python Man0XOR.py --i raw-shellcode.xyz --o output-file.xyz --key 0xAA --f c
 ```
